@@ -19,19 +19,21 @@ function validate() {
         alert("Username must have at least 5 characters");
         return false;
     }
-    if (Pass1!=Pass2) {
-        alert("Passwords must match!");
-        return false; }
-        if(pass1.length<8) {
+    if(Pass1.length<8) {
         alert("Passwords must have 8 characters");
         return false; 
     }
-    if (Age.value < 18 || Age.value > 110){
-        alert("Your age must be between 18 and 110");
+    if (Pass1!=Pass2) {
+        alert("Passwords must match!");
         return false; 
-    }if(Age.value == '') {
+    }
+    if(Age == '') {
         alert("Age cannot be blank");
         return false;
+    }
+    if (Age < 18 || Age > 110){
+        alert("Your age must be between 18 and 110");
+        return false; 
     }
     if(Email == '') {
 		alert("Email cannot be blank");
